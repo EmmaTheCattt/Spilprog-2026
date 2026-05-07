@@ -56,13 +56,14 @@ public class WinManager : NetworkBehaviour
     void OnWin(char player)
     {
         //Læs ratingen for begge spillere fra en fil eller database
-        float ratingX = 1500; //Eksempelværdi, skal erstattes med faktisk værdi
-        float ratingO = 1500; //Eksempelværdi, skal erstattes med faktisk værdi
+        //float ratingX = 1500; //Eksempelværdi, skal erstattes med faktisk værdi
+        //float ratingO = 1500; //Eksempelværdi, skal erstattes med faktisk værdi
         Debug.Log(player + " wins!");
-        Debug.Log("New ratings:");
-        Vector2 newRatings = UpdateRatings(ratingX, ratingO, player);
-        Debug.Log("X: " + newRatings.x+ "(" + (newRatings.x - ratingX) + ")");
-        Debug.Log("O: " + newRatings.y+ "(" + (newRatings.y - ratingO) + ")");
+        //Debug.Log("New ratings:");
+        //Vector2 newRatings = UpdateRatings(ratingX, ratingO, player);
+        //Debug.Log("X: " + newRatings.x+ "(" + (newRatings.x - ratingX) + ")");
+        //Debug.Log("O: " + newRatings.y+ "(" + (newRatings.y - ratingO) + ")");
+
     }
     void CheckWin(char[,] board)
     {

@@ -14,6 +14,8 @@ TagManager:
   - 7
   - 8
   - 9
+  - X
+  - O
   layers:
   - Default
   - TransparentFX
@@ -53,6 +55,9 @@ TagManager:
     locked: 0
   - name: dragable
     uniqueID: 1905319637
+    locked: 0
+  - name: moving
+    uniqueID: 3645002385
     locked: 0
   m_RenderingLayers:
   - Default
