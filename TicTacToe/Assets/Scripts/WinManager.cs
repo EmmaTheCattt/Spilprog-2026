@@ -38,7 +38,7 @@ public class WinManager : NetworkBehaviour
         Updateboard();
         CheckWin(board);
     }
-    char[,] Updateboard()
+    void Updateboard()
     {
         board[0, 0] = tile00.GetComponent<TileScript>().status;
         board[0, 1] = tile01.GetComponent<TileScript>().status;
@@ -49,11 +49,6 @@ public class WinManager : NetworkBehaviour
         board[2, 0] = tile20.GetComponent<TileScript>().status;
         board[2, 1] = tile21.GetComponent<TileScript>().status;
         board[2, 2] = tile22.GetComponent<TileScript>().status;
-
-        //Her skal du implementere logikken for at opdatere spilbrættet baseret på spillerens input
-        //Dette er kun et eksempel og skal tilpasses din specifikke implementation
-
-        return board;
     }
     //Metoder til at tjekke for vinder
     
