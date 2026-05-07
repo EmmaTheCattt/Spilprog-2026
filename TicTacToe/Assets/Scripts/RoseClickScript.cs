@@ -15,6 +15,6 @@ public class RoseClickScript : MonoBehaviour
     }
     private void OnMouseDrag()
     {
-        
+        GetComponent<Renderer>().material.color = Color.red;
     }
 }
