@@ -23,7 +23,9 @@ public class SQL : MonoBehaviour
         CreatePlayer("Magnus Carlsen", "MinKode", 2883);
         CreatePlayer("Camilla", "MinKode", 1000);
 
-        GetRating();
+        GetRating("Magnus Carlsen", "MinKode");
+
+        UpdateRating("Camilla", "MinKode", 170);
 
     }
 
@@ -67,7 +69,7 @@ public class SQL : MonoBehaviour
         }
     }
 
-    public void GetRating()
+    public void GetRating(string name, string code)
     {
         using (SqliteConnection connection = new SqliteConnection(ConnectionString))
         {
@@ -75,15 +77,35 @@ public class SQL : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM players;";
-
+                string text = "SELECT rating FROM players WHERE name = '{0}' AND code = '{1}'";
+                command.CommandText = string.Format (text, name, code);
                 using (IDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Debug.Log(reader["name"]);
+
+                        int currentRating = (int)reader["rating"];
+                        Debug.Log(currentRating);
                     }
                 }
+
+            }
+        }
+
+    }
+
+    public void UpdateRating(string name, string code, int newRating)
+    {
+        using (SqliteConnection connection = new SqliteConnection(ConnectionString))
+        {
+            connection.Open();
+
+            using (SqliteCommand command = connection.CreateCommand())
+            {
+                string text = "UPDATE players SET rating = '{2}' WHERE name = '{0}' AND code = '{1}'";
+                command.CommandText = string.Format(text, name, code, newRating);
+
+                command.ExecuteNonQuery();
             }
         }
 
