@@ -13,4 +13,8 @@ public class RoseClickScript : MonoBehaviour
     {
         
     }
+    private void OnMouseDrag()
+    {
+        
+    }
 }
