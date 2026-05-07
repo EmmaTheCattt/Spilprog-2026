@@ -2,19 +2,15 @@ using UnityEngine;
 
 public class RoseClickScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Renderer rend;
+
     void Start()
     {
-        
+        rend = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseDrag()
     {
-        
-    }
-    private void OnMouseDrag()
-    {
-        GetComponent<Renderer>().material.color = Color.red;
+       
     }
 }
