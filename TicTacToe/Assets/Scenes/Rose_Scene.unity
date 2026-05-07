@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 15480496}
   - component: {fileID: 15480495}
   - component: {fileID: 15480494}
+  - component: {fileID: 15480498}
   m_Layer: 3
   m_Name: Cube (6)
   m_TagString: 8
@@ -231,6 +232,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &15480498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15480493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &117985891
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,9 +257,10 @@ GameObject:
   - component: {fileID: 117985894}
   - component: {fileID: 117985893}
   - component: {fileID: 117985892}
+  - component: {fileID: 117985896}
   m_Layer: 3
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,6 +358,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &117985896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117985891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &244016546
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &471575070
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +509,6 @@ GameObject:
   - component: {fileID: 471575072}
   - component: {fileID: 471575071}
   - component: {fileID: 471575074}
-  - component: {fileID: 471575075}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -606,18 +634,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &471575075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471575070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
 --- !u!1 &757490248
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &992368029
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +772,7 @@ GameObject:
   - component: {fileID: 992368032}
   - component: {fileID: 992368031}
   - component: {fileID: 992368030}
+  - component: {fileID: 992368034}
   m_Layer: 3
   m_Name: Cube (8)
   m_TagString: 7
@@ -855,6 +873,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &992368034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992368029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &1052216369
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +898,7 @@ GameObject:
   - component: {fileID: 1052216372}
   - component: {fileID: 1052216371}
   - component: {fileID: 1052216370}
+  - component: {fileID: 1052216374}
   m_Layer: 3
   m_Name: Cube (4)
   m_TagString: 3
@@ -967,6 +999,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052216374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052216369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &1214661337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1151,7 @@ GameObject:
   - component: {fileID: 1501013832}
   - component: {fileID: 1501013831}
   - component: {fileID: 1501013830}
+  - component: {fileID: 1501013834}
   m_Layer: 3
   m_Name: Cube (2)
   m_TagString: 4
@@ -1206,6 +1252,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1501013834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501013829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &1572640587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1277,7 @@ GameObject:
   - component: {fileID: 1572640590}
   - component: {fileID: 1572640589}
   - component: {fileID: 1572640588}
+  - component: {fileID: 1572640592}
   m_Layer: 3
   m_Name: Cube (7)
   m_TagString: 9
@@ -1318,6 +1378,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1572640592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572640587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1 &1603244083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1403,7 @@ GameObject:
   - component: {fileID: 1603244086}
   - component: {fileID: 1603244085}
   - component: {fileID: 1603244084}
+  - component: {fileID: 1603244088}
   m_Layer: 3
   m_Name: Cube (5)
   m_TagString: 1
@@ -1430,6 +1504,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603244088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603244083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b9fc5a9582134d98eab749ebf52be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoseClickScript
+  rend: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1438,10 +1525,10 @@ SceneRoots:
   - {fileID: 1214661339}
   - {fileID: 757490253}
   - {fileID: 244016550}
+  - {fileID: 1501013833}
   - {fileID: 117985895}
   - {fileID: 1052216373}
   - {fileID: 1603244087}
-  - {fileID: 992368033}
-  - {fileID: 1572640591}
   - {fileID: 15480497}
-  - {fileID: 1501013833}
+  - {fileID: 1572640591}
+  - {fileID: 992368033}
