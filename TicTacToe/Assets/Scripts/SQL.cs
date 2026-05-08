@@ -1,6 +1,7 @@
 using Mono.Data.Sqlite;
 using System.Data;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SQL : MonoBehaviour
@@ -22,10 +23,6 @@ public class SQL : MonoBehaviour
 
         CreatePlayer("Magnus Carlsen", "MinKode", 2883);
         CreatePlayer("Camilla", "MinKode", 1000);
-
-        GetRating("Magnus Carlsen", "MinKode");
-
-        UpdateRating("Camilla", "MinKode", 170);
 
     }
 
@@ -77,17 +74,51 @@ public class SQL : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
+
+                string text0 = "SELECT EXISTS(SELECT * FROM players WHERE name = '{0}' AND code = '{1}')";
+                command.CommandText = string.Format (text0, name, code);
+                using (IDataReader reader0 = command.ExecuteReader())
+                {
+
+
+                    while (reader0.Read())
+                    {
+                        var exist = reader0.GetValue(0);
+                        string exist2 = exist.ToString();
+                       
+                        if (exist2 == "0")
+                        {
+                            Debug.Log("player does not exist");
+                            return;
+                        }
+                     
+
+
+                    }
+               
+
+                }
                 string text = "SELECT rating FROM players WHERE name = '{0}' AND code = '{1}'";
-                command.CommandText = string.Format (text, name, code);
+                command.CommandText = string.Format(text, name, code);
                 using (IDataReader reader = command.ExecuteReader())
                 {
+
+
                     while (reader.Read())
                     {
 
                         int currentRating = (int)reader["rating"];
                         Debug.Log(currentRating);
+
                     }
+
                 }
+
+
+
+
+
+
 
             }
         }
