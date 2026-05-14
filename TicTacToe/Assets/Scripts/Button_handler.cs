@@ -1,4 +1,6 @@
+using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button_handler : MonoBehaviour
 {
@@ -12,5 +14,17 @@ public class Button_handler : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void StartHost()
+    {
+        NetworkManager.Singleton.StartHost();
+        SceneManager.LoadScene("GAME_SCENE");
+    }
+
+    public void StartClient()
+    {
+        NetworkManager.Singleton.StartClient();
+        SceneManager.LoadScene("GAME_SCENE");
     }
 }
