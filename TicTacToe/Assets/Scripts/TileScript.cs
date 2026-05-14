@@ -14,11 +14,11 @@ public class TileScript : NetworkBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Collider entered");
-        if (other.gameObject.CompareTag("X"))
+        if (other.gameObject.CompareTag("X") && status == ' ')
         {
             status = 'X'; // Update tile status to 'X' when an 'X' piece enters the tile
         }
-        else if (other.gameObject.CompareTag("O"))
+        else if (other.gameObject.CompareTag("O") && status == ' ')
         {
             status = 'O'; // Update tile status to 'O' when an 'O' piece enters the tile
         }
