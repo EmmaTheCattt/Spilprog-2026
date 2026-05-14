@@ -44,20 +44,43 @@ public class SQL : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
-                command.CommandText = "CREATE TABLE IF NOT EXISTS players (name VARCHAR(30), code VARCHAR(30), rating INT)";
+                command.CommandText = "CREATE TABLE IF NOT EXISTS players (name VARCHAR(30), code VARCHAR(30), rating REAL)";
                 command.ExecuteNonQuery();
             }
         }
     }
 
-    public void CreatePlayer(string name, string code, int rating)
+    public void CreatePlayer(string name, string code, float rating)
     {
         using (SqliteConnection connection = new SqliteConnection(ConnectionString))
         {
             connection.Open();
-
             using (SqliteCommand command = connection.CreateCommand())
             {
+
+                string text0 = "SELECT EXISTS(SELECT * FROM players WHERE name = '{0}' AND code = '{1}')";
+                command.CommandText = string.Format(text0, name, code);
+                using (IDataReader reader0 = command.ExecuteReader())
+                {
+
+
+                    while (reader0.Read())
+                    {
+                        var exist = reader0.GetValue(0);
+                        string exist2 = exist.ToString();
+
+                        if (exist2 == "1")
+                        {
+                            Debug.Log("player already exists");
+                            return;
+                        }
+
+
+
+                    }
+
+
+                }
                 string text = "INSERT INTO players (name, code, rating) VALUES ('{0}', '{1}', '{2}')";
                 command.CommandText = string.Format(text, name, code, rating);
 
@@ -66,7 +89,7 @@ public class SQL : MonoBehaviour
         }
     }
 
-    public void GetRating(string name, string code)
+    public float GetRating(string name, string code)
     {
         using (SqliteConnection connection = new SqliteConnection(ConnectionString))
         {
@@ -89,7 +112,7 @@ public class SQL : MonoBehaviour
                         if (exist2 == "0")
                         {
                             Debug.Log("player does not exist");
-                            return;
+                            return 0;
                         }
                      
 
@@ -107,8 +130,9 @@ public class SQL : MonoBehaviour
                     while (reader.Read())
                     {
 
-                        int currentRating = (int)reader["rating"];
+                        float currentRating = (float)reader["rating"];
                         Debug.Log(currentRating);
+                        return currentRating;
 
                     }
 
@@ -116,16 +140,13 @@ public class SQL : MonoBehaviour
 
 
 
-
-
-
-
             }
         }
+        return 0;
 
     }
 
-    public void UpdateRating(string name, string code, int newRating)
+    public void UpdateRating(string name, string code, float newRating)
     {
         using (SqliteConnection connection = new SqliteConnection(ConnectionString))
         {
