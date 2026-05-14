@@ -13,6 +13,7 @@ public class TileScript : NetworkBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Collider entered");
         if (other.gameObject.CompareTag("X"))
         {
             status = 'X'; // Update tile status to 'X' when an 'X' piece enters the tile
@@ -24,6 +25,7 @@ public class TileScript : NetworkBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("Collider exited");
         if (other.gameObject.CompareTag("X") && status == 'X')
         {
             status = ' '; // Reset tile status to empty when an 'X' piece exits the tile
