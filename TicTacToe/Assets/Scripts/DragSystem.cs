@@ -1,6 +1,7 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class DragSystem : MonoBehaviour
+public class DragSystem : NetworkBehaviour
 {
 
     private void OnMouseDrag()
