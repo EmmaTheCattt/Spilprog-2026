@@ -27,4 +27,9 @@ public class Button_handler : MonoBehaviour
         NetworkManager.Singleton.StartClient();
         SceneManager.LoadScene("GAME_SCENE");
     }
+
+    public void OnServerClick()
+    {
+        NetworkManager.Singleton.StartServer();
+    }
 }
