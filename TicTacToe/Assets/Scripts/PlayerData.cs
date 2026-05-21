@@ -25,6 +25,7 @@ public class PlayerData : NetworkBehaviour
     TMPro.TMP_Text ratingTextClient;
     public override void OnNetworkSpawn()
     {
+        /*
         NetworkData.ND.playerName1.OnValueChanged += (FixedString32Bytes oldValue, FixedString32Bytes newValue) =>
         {
             nameTextHost.text = newValue.ToString();
@@ -41,6 +42,7 @@ public class PlayerData : NetworkBehaviour
         {
             ratingTextClient.text = newValue.ToString();
         };
+        */
 
         if (IsOwner)
         {
