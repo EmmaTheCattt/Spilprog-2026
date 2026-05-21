@@ -11,6 +11,10 @@ public class PlayerData : NetworkBehaviour
     [SerializeField]
     Canvas loginCanvasClient;
     [SerializeField]
+    Canvas HostInfo;
+    [SerializeField]
+    Canvas ClientInfo;
+    [SerializeField]
     TMPro.TMP_Text nameTextHost;
     [SerializeField]
     TMPro.TMP_Text ratingTextHost;
@@ -24,11 +28,15 @@ public class PlayerData : NetworkBehaviour
         {
             loginCanvasHost.gameObject.SetActive(true);
             loginCanvasClient.gameObject.SetActive(false);
+            HostInfo.gameObject.SetActive(true);
+            ClientInfo.gameObject.SetActive(false); 
         }
         else
         {
             loginCanvasHost.gameObject.SetActive(false);
             loginCanvasClient.gameObject.SetActive(true);
+            HostInfo.gameObject.SetActive(false);
+            ClientInfo.gameObject.SetActive(true);
         }
     }
 

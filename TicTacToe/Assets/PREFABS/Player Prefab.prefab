@@ -3034,6 +3034,8 @@ MonoBehaviour:
   rating: 0
   loginCanvasHost: {fileID: 2206216813521091418}
   loginCanvasClient: {fileID: 2294809445700808716}
+  HostInfo: {fileID: 6122451297578214163}
+  ClientInfo: {fileID: 5388515977200353961}
   nameTextHost: {fileID: 1274522681944499935}
   ratingTextHost: {fileID: 8026719174008559343}
   nameTextClient: {fileID: 4012714551631624037}
@@ -3224,7 +3226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3536175702
+  GlobalObjectIdHash: 2823006113
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
