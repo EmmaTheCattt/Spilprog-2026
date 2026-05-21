@@ -1008,7 +1008,7 @@ MonoBehaviour:
   baseRating: 1000
   db: {fileID: 0}
   sqldb: {fileID: 0}
-  playerData: {fileID: 0}
+  playerData: {fileID: 6871575450303055638}
 --- !u!1 &2308409192575319258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,7 +2330,7 @@ MonoBehaviour:
   baseRating: 1000
   db: {fileID: 0}
   sqldb: {fileID: 0}
-  playerData: {fileID: 0}
+  playerData: {fileID: 6871575450303055638}
 --- !u!1 &4298373299870153941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,7 +3226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2823006113
+  GlobalObjectIdHash: 3536175702
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
