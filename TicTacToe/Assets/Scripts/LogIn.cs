@@ -11,7 +11,8 @@ public class LogIn : MonoBehaviour
     public SQL db;
     public GameObject sqldb;
 
-
+    public PlayerData playerData;
+    
     public void SignUp()
     {
         string username = name.text;
@@ -24,12 +25,15 @@ public class LogIn : MonoBehaviour
     {
         string username = name.text;
         string password = code.text;
-        db.GetRating(username, password);
+        playerData.SetName(username);
+        playerData.SetRating(db.GetRating(username, password));
+        playerData.Login();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
+        playerData = GameObject.Find("PlayerData").GetComponent<PlayerData>();
         sqldb = GameObject.Find("DatabaseTest");
         db = sqldb.GetComponent<SQL>();
     }

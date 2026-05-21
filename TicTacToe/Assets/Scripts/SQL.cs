@@ -21,16 +21,15 @@ public class SQL : MonoBehaviour
     {
         CreateDB();
 
-        CreatePlayer("Magnus Carlsen", "MinKode", 2883);
+        CreatePlayer("Magnus C.", "MinKode", 2883);
         CreatePlayer("Camilla", "MinKode", 1000);
-
+        CreatePlayer("Valdemar", "MinKode", 4);
+        CreatePlayer("Rose", "MinKode", 600);
+        CreatePlayer("Emma", "MinKode", 3);
+        CreatePlayer("Alex", "MinKode", 1000);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private string ConnectionString => $"URI=file:{databasePath}";
 
 
