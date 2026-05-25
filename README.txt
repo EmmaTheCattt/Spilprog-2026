@@ -28,6 +28,9 @@ HOW TO PLAY THE GAME:
 3. 	Have the other join as CLIENT, press the "CLIENT" button in the upper left corner.
 4.  a.	Enter a name not already in the system and a password, press "Register" and have a fresh player made in the system with a rating of 1000
     b.	Enter a name fx "Alex" and the password "MinKode" and hit Login.
+	The following players are added when the Database is first created:
+	"Alex", "Camilla", "Rose", "Emma", "Valdemar", "Magnus C." and "Magnus Carlsen"
+	All of the passwords are "MinKode" (Very secure, Much safe)
 5. 	Repeat for the other player.
 6. 	Move the desired pieces, our game is fast paced and without turn order by design! It operates on a first come first served politic.
 7.	When wither player has connected 3 pieces in a row, the game will end rather instantly, and the players ratings will be updated and the board reset.
