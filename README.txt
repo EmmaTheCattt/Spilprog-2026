@@ -26,14 +26,14 @@ HOW TO PLAY THE GAME:
 1. 	Run two seperate instances of the game. Either through the unity editor (Includes special bug) or from the Final Build Folder.
 2. 	Have one Instance join as HOST, press the "HOST" button in the upper left corner.
 3. 	Have the other join as CLIENT, press the "CLIENT" button in the upper left corner.
-4.  a.	Enter a name not already in the system and a password, press "Register" and have a fresh player made in the system with a rating of 1000
+4.  a.	Enter a name not already in the system and a password, press "Sign Up" and have a fresh player made in the system with a rating of 1000
     b.	Enter a name fx "Alex" and the password "MinKode" and hit Login.
 	The following players are added when the Database is first created:
 	"Alex", "Camilla", "Rose", "Emma", "Valdemar", "Magnus C." and "Magnus Carlsen"
 	All of the passwords are "MinKode" (Very secure, Much safe)
 5. 	Repeat for the other player.
 6. 	Move the desired pieces, our game is fast paced and without turn order by design! It operates on a first come first served politic.
-7.	When wither player has connected 3 pieces in a row, the game will end rather instantly, and the players ratings will be updated and the board reset.
+7.	When either player has connected 3 pieces in a row, the game will end rather instantly, and the players ratings will be updated and the board reset.
 8. 	To play again simple move the pieces again. 
 9. 	To login as different players, you will need to close both instances and open them again. This is also a feature...
 
