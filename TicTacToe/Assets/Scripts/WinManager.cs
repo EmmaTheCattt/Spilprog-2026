@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
 public class WinManager : NetworkBehaviour
 {
-   
+    public bool gameOver = false;
     public static WinManager WM;
     public SQL DB;
     public GameObject sqldb;
@@ -47,6 +48,7 @@ public class WinManager : NetworkBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (gameOver) GameOver();
         Updateboard();
         CheckWin(board);
     }
@@ -95,7 +97,12 @@ public class WinManager : NetworkBehaviour
         //Vector2 newRatings = UpdateRatings(ratingX, ratingO, player);
         //Debug.Log("X: " + newRatings.x+ "(" + (newRatings.x - ratingX) + ")");
         //Debug.Log("O: " + newRatings.y+ "(" + (newRatings.y - ratingO) + ")");
-
+        gameOver = true;
+    }
+    public void GameOver()
+    {
+        //Game over somehow
+        
     }
     void CheckWin(char[,] board)
     {

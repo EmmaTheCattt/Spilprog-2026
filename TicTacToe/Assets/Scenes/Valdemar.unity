@@ -2485,6 +2485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WinManager
   ShowTopMostFoldoutHeaderGroup: 1
   DB: {fileID: 0}
+  sqldb: {fileID: 0}
   tile00: {fileID: 1353279365}
   tile01: {fileID: 1513413833}
   tile02: {fileID: 1482135505}
