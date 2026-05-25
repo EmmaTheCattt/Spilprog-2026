@@ -256,6 +256,16 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &61357876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2563216914242867905, guid: 77fd7389ba3c3da4780a50a50446e2f1, type: 3}
+  m_PrefabInstance: {fileID: 391632464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &167319162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348840115606252735, guid: 11b6bb17838496749913f50dc9192648, type: 3}
+  m_PrefabInstance: {fileID: 934360111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &190244612
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +299,11 @@ Transform:
   - {fileID: 1105489683}
   m_Father: {fileID: 1243788430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &373413662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348840115606252735, guid: 11b6bb17838496749913f50dc9192648, type: 3}
+  m_PrefabInstance: {fileID: 798132269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &391632464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,6 +439,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 40d90d3a1da8d3845a2b806c0ca15dec, type: 3}
   m_PrefabInstance: {fileID: 432973982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &457826916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2563216914242867905, guid: 77fd7389ba3c3da4780a50a50446e2f1, type: 3}
+  m_PrefabInstance: {fileID: 742383642}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &487344413
 PrefabInstance:
@@ -610,6 +630,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &619199154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348840115606252735, guid: 11b6bb17838496749913f50dc9192648, type: 3}
+  m_PrefabInstance: {fileID: 1260352280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &627558364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2484,6 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinManager
   ShowTopMostFoldoutHeaderGroup: 1
+  gameOver: 0
   DB: {fileID: 0}
   sqldb: {fileID: 0}
   tile00: {fileID: 1353279365}
@@ -2495,6 +2521,12 @@ MonoBehaviour:
   tile20: {fileID: 2085042992}
   tile21: {fileID: 2023208596}
   tile22: {fileID: 627558365}
+  O_1: {fileID: 1718659161}
+  O_2: {fileID: 61357876}
+  O_3: {fileID: 457826916}
+  X_1: {fileID: 167319162}
+  X_2: {fileID: 619199154}
+  X_3: {fileID: 373413662}
 --- !u!114 &1676545746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,6 +2552,11 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!1 &1718659161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2563216914242867905, guid: 77fd7389ba3c3da4780a50a50446e2f1, type: 3}
+  m_PrefabInstance: {fileID: 660664337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1724274901
 GameObject:
   m_ObjectHideFlags: 0

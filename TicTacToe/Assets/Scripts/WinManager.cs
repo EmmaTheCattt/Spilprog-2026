@@ -29,16 +29,22 @@ public class WinManager : NetworkBehaviour
     public GameObject tile22;
     [SerializeField]
     public GameObject O_1;
+    private Vector3 O_1_startPos;
     [SerializeField]
     public GameObject O_2;
+    private Vector3 O_2_startPos;
     [SerializeField]
     public GameObject O_3;
+    private Vector3 O_3_startPos;
     [SerializeField]
     public GameObject X_1;
+    private Vector3 X_1_startPos;
     [SerializeField]
     public GameObject X_2;
+    private Vector3 X_2_startPos;
     [SerializeField]
     public GameObject X_3;
+    private Vector3 X_3_startPos;
 
 
     //Eksempel på et spilbræt, hvor 'X' har vundet. Skal erstattes med det faktiske spilbræt i din implementation
@@ -55,7 +61,7 @@ public class WinManager : NetworkBehaviour
         }
         sqldb = GameObject.Find("DatabaseTest");
         DB = sqldb.GetComponent<SQL>();
-
+        GetPositions();
     }
 
     // Update is called once per frame
@@ -114,9 +120,25 @@ public class WinManager : NetworkBehaviour
     }
     public void GameOver()
     {
-        //Game over somehow
-        
+        O_1.transform.position = O_1_startPos;
+        O_2.transform.position = O_2_startPos;
+        O_3.transform.position = O_3_startPos;
+        X_1.transform.position = X_1_startPos;
+        X_2.transform.position = X_2_startPos;
+        X_3.transform.position = X_3_startPos;
+        gameOver = false;
+
     }
+    public void GetPositions()
+    {
+        O_1_startPos = O_1.transform.position;
+        O_2_startPos = O_2.transform.position;
+        O_3_startPos = O_3.transform.position;
+        X_1_startPos = X_1.transform.position;
+        X_2_startPos = X_2.transform.position;
+        X_3_startPos = X_3.transform.position;
+    }
+
     void CheckWin(char[,] board)
     {
         RowCheck(board, 'X');
