@@ -27,6 +27,19 @@ public class WinManager : NetworkBehaviour
     public GameObject tile21;
     [SerializeField]
     public GameObject tile22;
+    [SerializeField]
+    public GameObject O_1;
+    [SerializeField]
+    public GameObject O_2;
+    [SerializeField]
+    public GameObject O_3;
+    [SerializeField]
+    public GameObject X_1;
+    [SerializeField]
+    public GameObject X_2;
+    [SerializeField]
+    public GameObject X_3;
+
 
     //Eksempel på et spilbræt, hvor 'X' har vundet. Skal erstattes med det faktiske spilbræt i din implementation
     char[,] board = new char[3, 3];
