@@ -145,7 +145,7 @@ public class SQL : MonoBehaviour
 
     }
 
-    public void UpdateRating(string name, string code, float newRating)
+    public void UpdateRating(string name, float newRating)
     {
         using (SqliteConnection connection = new SqliteConnection(ConnectionString))
         {
@@ -153,8 +153,8 @@ public class SQL : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
-                string text = "UPDATE players SET rating = '{2}' WHERE name = '{0}' AND code = '{1}'";
-                command.CommandText = string.Format(text, name, code, newRating);
+                string text = "UPDATE players SET rating = '{1}' WHERE name = '{0}'";
+                command.CommandText = string.Format(text, name, newRating);
 
                 command.ExecuteNonQuery();
             }
