@@ -7,6 +7,7 @@ public class WinManager : NetworkBehaviour
    
     public static WinManager WM;
     public SQL DB;
+    public GameObject sqldb;
     [SerializeField]
     public GameObject tile00; //Prefab for spilbrættets felter, skal sættes i Unity editoren
     [SerializeField]
@@ -38,7 +39,9 @@ public class WinManager : NetworkBehaviour
             WM = this;
             DontDestroyOnLoad(this);
         }
-        
+        sqldb = GameObject.Find("DatabaseTest");
+        DB = sqldb.GetComponent<SQL>();
+
     }
 
     // Update is called once per frame
@@ -64,10 +67,10 @@ public class WinManager : NetworkBehaviour
     //Metode til at udskrive hvem der har vundet
     void OnWin(char player)// X eller O
     {
-        string playerX = NetworkData.ND.playerName1.Value.ToString();
-        string playerO = NetworkData.ND.playerName2.Value.ToString();
-        float ratingX = NetworkData.ND.rating1.Value;
-        float ratingO = NetworkData.ND.rating2.Value;
+        string playerO = NetworkData.ND.playerName1.Value.ToString();
+        string playerX = NetworkData.ND.playerName2.Value.ToString();
+        float ratingO = NetworkData.ND.rating1.Value;
+        float ratingX = NetworkData.ND.rating2.Value;
         //Læs ratingen for begge spillere fra en fil eller database
         //float ratingX = 1500; //Eksempelværdi, skal erstattes med faktisk værdi
         //float ratingO = 1500; //Eksempelværdi, skal erstattes med faktisk værdi
@@ -75,18 +78,18 @@ public class WinManager : NetworkBehaviour
         if (player == 'X')
         {
             Debug.Log(playerX + " wins!");
-            NetworkData.ND.rating1.Value = UpdateRatings(ratingX, ratingO, player).x;
-            NetworkData.ND.rating2.Value = UpdateRatings(ratingX, ratingO, player).y;
-            DB.UpdateRating(playerX,NetworkData.ND.rating1.Value);
-            DB.UpdateRating(playerO,NetworkData.ND.rating2.Value);
+            NetworkData.ND.rating2.Value = UpdateRatings(ratingX, ratingO, player).x;
+            NetworkData.ND.rating1.Value = UpdateRatings(ratingX, ratingO, player).y;
+            DB.UpdateRating(playerX,NetworkData.ND.rating2.Value);
+            DB.UpdateRating(playerO,NetworkData.ND.rating1.Value);
         }
         else if (player == 'O')
         {
             Debug.Log(playerO + " wins!");
-            NetworkData.ND.rating1.Value = UpdateRatings(ratingX, ratingO, player).x;
-            NetworkData.ND.rating2.Value = UpdateRatings(ratingX, ratingO, player).y;
-            DB.UpdateRating(playerX,NetworkData.ND.rating1.Value);
-            DB.UpdateRating(playerO,NetworkData.ND.rating2.Value);
+            NetworkData.ND.rating2.Value = UpdateRatings(ratingX, ratingO, player).x;
+            NetworkData.ND.rating1.Value = UpdateRatings(ratingX, ratingO, player).y;
+            DB.UpdateRating(playerX,NetworkData.ND.rating2.Value);
+            DB.UpdateRating(playerO,NetworkData.ND.rating1.Value);
         }
         //Debug.Log("New ratings:");
         //Vector2 newRatings = UpdateRatings(ratingX, ratingO, player);
